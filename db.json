@@ -1,0 +1,45 @@
+{
+  "produtos": [
+    {
+      "nome": "Pizza Margherita",
+      "preco": 55,
+      "categoria": "Pizzas",
+      "descricao": "Molho de tomate, mussarela, manjericão fresco e azeite.",
+      "imagem": "",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Burger Artesanal",
+      "categoria": "Lanches",
+      "preco": 32.9,
+      "descricao": "Blend 180g, queijo cheddar, bacon e molho especial.",
+      "imagem": ""
+    },
+    {
+      "id": "3",
+      "nome": "Salada Caesar",
+      "categoria": "Saladas",
+      "preco": 28.5,
+      "descricao": "Alface romana, frango grelhado, croutons e molho caesar.",
+      "imagem": ""
+    },
+    {
+      "id": "4",
+      "nome": "Suco Natural de Laranja",
+      "categoria": "Bebidas",
+      "preco": 12,
+      "descricao": "Suco 100% natural, feito na hora.",
+      "imagem": ""
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "email": "admin@food.com",
+      "senha": "123456"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
