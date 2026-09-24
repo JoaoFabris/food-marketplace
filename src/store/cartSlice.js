@@ -57,8 +57,7 @@ const cartSlice = createSlice({
 
 export const { addProduct, removeProduct, updateQuantity, clearCart } = cartSlice.actions;
 
-// Selectors: funções que "leem" partes calculadas do state,
-// para não repetir essa lógica em todo componente que precisar do total.
+
 export const selectItensCarrinho = (state) => state.cart.itens;
 
 export const selectTotalCarrinho = (state) =>

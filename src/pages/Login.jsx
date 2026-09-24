@@ -26,10 +26,6 @@ function Login() {
     <div className="min-h-[80vh] flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-6">
-          <span className="text-3xl">🍔</span>
-          <h1 className="text-2xl font-bold text-food-primary mt-1">
-            FoodMarket
-          </h1>
           <p className="text-gray-500 text-sm mt-1">
             Faça login para acessar sua conta
           </p>

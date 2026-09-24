@@ -5,8 +5,6 @@ const AuthContext = createContext(null);
 
 const CHAVE_USUARIO = 'food-marketplace:usuario';
 
-// Provider que envolve toda a aplicação, dando acesso ao usuário
-// logado (ou null) e às funções de login/logout para qualquer componente.
 export function AuthProvider({ children }) {
   const [usuario, setUsuario] = useState(() => {
     try {
@@ -20,7 +18,6 @@ export function AuthProvider({ children }) {
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState('');
 
-  // Mantém o login persistido entre recarregamentos da página.
   useEffect(() => {
     if (usuario) {
       localStorage.setItem(CHAVE_USUARIO, JSON.stringify(usuario));

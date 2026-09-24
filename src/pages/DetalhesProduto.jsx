@@ -57,13 +57,6 @@ function DetalhesProduto() {
 
   return (
     <div className="max-w-md mx-auto px-5 py-8">
-      <button
-        onClick={() => navigate(-1)}
-        className="text-food-dark text-sm mb-3"
-      >
-        ← Voltar
-      </button>
-
       <div className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">
         <img
           src={produto.imagem || IMAGEM_PADRAO}

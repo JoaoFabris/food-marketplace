@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useAuth } from '../context/AuthContext';
 import { selectQuantidadeTotalCarrinho } from '../store/cartSlice';
+import IconeCarrinho from './IconeCarrinho';
+
+import logo from '../assets/logo.png';
 
 function Header() {
   const { usuario, logout } = useAuth();
@@ -10,8 +13,8 @@ function Header() {
   return (
     <header className="bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
       <Link to="/" className="flex items-center gap-2 no-underline">
-        <span className="text-2xl">🍔</span>
-        <span className="text-xl font-bold text-food-primary">FoodMarket</span>
+        {/* 2. Substituindo a string estática pela variável da imagem importada */}
+        <img src={logo} alt="Logo" className="w-15 h-14" />
       </Link>
 
       <nav className="flex items-center gap-6">
@@ -33,9 +36,14 @@ function Header() {
 
         <Link
           to="/carrinho"
-          className="text-sm text-food-dark hover:text-food-primary transition-colors"
+          className="relative text-food-dark hover:text-food-primary transition-colors"
         >
-          Carrinho ({quantidadeTotal})
+          <IconeCarrinho className="w-6 h-6" />
+          {quantidadeTotal > 0 && (
+            <span className="absolute -top-2 -right-2 bg-food-primary text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+              {quantidadeTotal}
+            </span>
+          )}
         </Link>
 
         {usuario ? (
