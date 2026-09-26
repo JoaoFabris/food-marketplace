@@ -30,7 +30,7 @@ function Carrinho() {
   }
 
   function handleFinalizarCompra() {
-    alert('Compra finalizada com sucesso! 🎉');
+    alert('Compra finalizada com sucesso!');
     dispatch(clearCart());
   }
 
